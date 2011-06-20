@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="Title" table="TITLE">
+        <!--<cache usage="read-write"/>-->
+
+        <composite-id name="id" class="TitleId">
+            <key-property name="id" column="TITLE_ID"/>
+            <key-property name="personId" column="PERSON_ID" />
+        </composite-id>
+
+        <property name="name" column="NAME"/>
+        
+        
+
+
+    </class>
+</hibernate-mapping>
