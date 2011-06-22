@@ -56,6 +56,7 @@ public class Person {
     }
 
     public void addTitle(Title title) {
+        title.setPerson(this);
         getTitles().add(title);
     }
 

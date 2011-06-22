@@ -7,6 +7,7 @@
 public class Title {
     private TitleId id;
     private String name;
+    private Person person;
 
     public Title(){}
 
@@ -16,6 +17,9 @@ public class Title {
     }
 
     public TitleId getId() {
+        if (id != null && id.getPersonId() == null) {
+            id.setPersonId(getPerson().getId());
+        }
         return id;
     }
 
@@ -29,6 +33,14 @@ public class Title {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Person getPerson() {
+        return person;
+    }
+
+    public void setPerson(Person person) {
+        this.person = person;
     }
 
     @Override

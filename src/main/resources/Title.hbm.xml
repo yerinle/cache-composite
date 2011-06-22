@@ -12,6 +12,7 @@
             <key-property name="personId" column="PERSON_ID" />
         </composite-id>
 
+        <many-to-one name="person" class="Person" column="PERSON_ID" insert="false" update="false"/>
         <property name="name" column="NAME"/>
         
         

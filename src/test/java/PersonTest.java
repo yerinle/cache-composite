@@ -24,8 +24,7 @@ public class PersonTest {
         Transaction tx  = session.beginTransaction();
 
         Person person = new Person(FIRST_NAME, LAST_NAME);
-        session.saveOrUpdate(person);
-        TitleId titlepk = new TitleId(1l, person.getId());
+        TitleId titlepk = new TitleId(1l);
         Title title = new Title(titlepk, POSITION);
         person.addTitle(title);
         session.saveOrUpdate(person);

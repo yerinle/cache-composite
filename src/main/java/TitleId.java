@@ -25,6 +25,10 @@ public class TitleId implements Serializable {
         this.personId = personId;
     }
 
+    public TitleId(Long id) {
+        this.id = id;
+    }
+
     public Long getPersonId() {
         return personId;
     }
